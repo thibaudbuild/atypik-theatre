@@ -23,7 +23,7 @@ window.ATYPIK = {
       jour: "Mardi",
       nom: "Caméra",
       description:
-        "Apprivoiser la caméra : casting, self-tape, scènes tournées. Écriture de scènes sur mesure pour votre bande démo.",
+        "Apprivoiser la caméra : casting, self-tape, scènes tournées, écriture.",
       statut: "ouvert",
       note: "Ouverture le 3 novembre",
     },

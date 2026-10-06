@@ -63,8 +63,8 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .signature strong { display: block; font-family: var(--titre); font-weight: 400; font-size: 2rem; text-transform: uppercase; line-height: 1.1; margin-top: 28px; }
 .signature span { font-size: 0.9rem; }
 .complices { display: flex; align-items: center; margin-top: 36px; padding-top: 24px; border-top: 2px solid var(--noir); max-width: 620px; }
-.complices img { width: 64px; height: 64px; border-radius: 50%; object-fit: cover; }
-.complices img + img { margin-left: -14px; }
+.complices img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+.complices img + img { margin-left: -12px; }
 .complices p { margin-left: 16px; font-size: 0.95rem; font-weight: 500; }
 
 /* Blocs */
@@ -83,7 +83,7 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .est-ouvert { background: var(--noir); color: var(--blanc); }
 .est-ouvert .etiquette { background: var(--orange); }
 .est-complet .carte-jour { color: var(--gris); }
-.est-complet .etiquette { top: 26px; left: auto; right: 18px; padding: 4px 14px 2px; background: transparent; color: var(--orange); border: 3px solid var(--orange); border-radius: 6px; box-shadow: 0 0 0 2px var(--blanc), 0 0 0 4px var(--orange); font-family: var(--titre); font-size: 2.4rem; letter-spacing: 0.1em; line-height: 1.1; transform: rotate(-12deg); opacity: 0.92; mask-image: repeating-linear-gradient(35deg, #000 0 5px, rgba(0,0,0,0.6) 5px 6px, #000 6px 11px, rgba(0,0,0,0.75) 11px 12px); -webkit-mask-image: repeating-linear-gradient(35deg, #000 0 5px, rgba(0,0,0,0.6) 5px 6px, #000 6px 11px, rgba(0,0,0,0.75) 11px 12px); }
+.est-complet .etiquette { top: -22px; left: auto; right: -16px; z-index: 2; padding: 4px 14px 2px; background: transparent; color: var(--orange); border: 3px solid var(--orange); border-radius: 6px; box-shadow: 0 0 0 2px var(--blanc), 0 0 0 4px var(--orange); font-family: var(--titre); font-size: 2.4rem; letter-spacing: 0.1em; line-height: 1.1; transform: rotate(-12deg); opacity: 0.92; mask-image: repeating-linear-gradient(35deg, #000 0 5px, rgba(0,0,0,0.6) 5px 6px, #000 6px 11px, rgba(0,0,0,0.75) 11px 12px); -webkit-mask-image: repeating-linear-gradient(35deg, #000 0 5px, rgba(0,0,0,0.6) 5px 6px, #000 6px 11px, rgba(0,0,0,0.75) 11px 12px); }
 
 .avantages { background: var(--creme); padding: 56px 0 72px; border-top: 2px solid var(--noir); }
 .plus { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }

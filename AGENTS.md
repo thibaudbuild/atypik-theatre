@@ -23,7 +23,7 @@ Site statique, sans étape de build ni dépendance. Ne pas en ajouter.
 
 - Toujours écrire avec les accents français. Pas de tiret long.
 - Ton : professionnel, simple, pédagogique. Pas de ton familier ni de formules accrocheuses. Le site s'adresse à l'élève en le vouvoyant (« votre bande démo »), y compris dans le mot de Shawna, seul texte à la première personne. Le bloc partenaires vouvoie aussi.
-- Ne jamais promettre d'images tournées : le cours caméra travaille l'écriture de scènes pour la bande démo de l'élève.
+- Ne jamais promettre d'images tournées ni de bande démo livrée dans la description des cours.
 - Prix en CHF.
 - Ne jamais publier le nombre exact de places par classe : écrire « places limitées ».
 - Ne jamais publier l'adresse exacte des cours : « secteur Plainpalais, adresse communiquée à l'inscription ».
