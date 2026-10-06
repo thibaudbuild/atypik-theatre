@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atypik Théâtre | Cours de théâtre et de jeu caméra à Genève</title>
+  <meta name="description" content="Un lieu à Genève pour les comédiennes et comédiens qui veulent en faire leur métier. Cours hebdomadaires, stages et rencontres avec des directeurs de casting.">
+  <meta property="og:title" content="Atypik Théâtre | Chaque talent mérite d'être révélé">
+  <meta property="og:description" content="Cours, stages et rencontres pour comédiennes et comédiens à Genève.">
+  <meta property="og:image" content="images/hero.jpg">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav-logo"><img src="images/logo-blanc.png" alt="Atypik Théâtre"></a>
+  <nav class="nav-liens">
+    <a href="#histoire">Pourquoi Atypik</a>
+    <a href="#cours">Cours</a>
+    <a href="#spectacle">Spectacle</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#grandir">Partenaires</a>
+  </nav>
+  <a href="#cours" class="btn btn-plein nav-cta">S'inscrire</a>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <img class="hero-photo" src="images/hero.jpg" alt="Deux comédiens filmés pendant un stage, leur image sur l'écran de contrôle">
+    <div class="hero-contenu">
+      <p class="surtitre">Atypik Théâtre · Genève</p>
+      <h1>Chaque talent<br>mérite d'être <em>révélé</em></h1>
+      <p class="hero-texte">Un lieu à Genève pour les comédiennes et comédiens qui veulent en faire leur métier, sans jamais cesser d'être eux-mêmes.</p>
+      <div class="actions">
+        <a href="#cours" class="btn btn-plein">Découvrir les cours</a>
+        <a href="#agenda" class="btn btn-contour">Les prochains rendez-vous</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lettre" id="histoire">
+    <div class="conteneur lettre-grille">
+      <figure class="lettre-portrait"><img src="images/equipe-shawna.jpg" alt="Portrait de Shawna Municchi" loading="lazy"></figure>
+      <div class="lettre-texte">
+        <p class="surtitre">Pourquoi Atypik</p>
+        <p class="accroche">On t'a peut-être dit que tu étais trop. Trop sensible, trop discret, trop intense. Ou pas assez « le profil ».</p>
+        <p class="accroche fort">Ici, c'est exactement ce qu'on vient chercher.</p>
+        <p>Je crois que les artistes qui nous bouleversent ne ressemblent à personne. Ils ont une histoire, une voix, un regard, une façon bien à eux d'occuper l'espace. Et un jour, ils ont osé s'en servir.</p>
+        <p>J'ai créé Atypik pour ça. Pour qu'il existe à Genève un endroit où l'on apprend d'abord à se connaître, parce qu'un jeu sincère commence là. Un endroit exigeant et bienveillant, où l'on a le droit d'essayer, de se tromper, de recommencer.</p>
+        <p>Et comme le talent seul ne suffit pas, on te donne de quoi avancer : des textes, des images de toi, et des rencontres avec celles et ceux qui font ce métier.</p>
+        <p>Il y a une phrase de René Char que j'aime répéter :</p>
+        <blockquote class="citation">« Impose ta chance, serre ton bonheur et va vers ton risque. À te regarder, ils s'habitueront. »</blockquote>
+        <p class="signature"><strong>Shawna Municchi</strong><span>Fondatrice, professeure de théâtre et directrice d'acteurs</span></p>
+        <div class="complices">
+          <img src="images/equipe-aziz.jpg" alt="Aziz Meguellati" loading="lazy">
+          <img src="images/equipe-roxane.jpg" alt="Roxane Schorpp" loading="lazy">
+          <p>Avec Aziz Meguellati et Roxane Schorpp, comédiens eux aussi, qui font vivre l'association à mes côtés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc cours" id="cours">
+    <div class="conteneur">
+      <p class="surtitre">Les cours</p>
+      <h2>Trois rendez-vous par semaine</h2>
+      <p class="intro">Pour les comédiennes et comédiens semi-pros, pros, et pour celles et ceux qui se préparent à le devenir. On se retrouve à Genève, du côté de Plainpalais. L'adresse t'attend à l'inscription.</p>
+      <div class="cartes" id="cours-liste"></div>
+      <ul class="plus">
+        <li><strong>Des textes</strong>Une bibliothèque de scènes de théâtre et de cinéma, et l'envie d'écrire les tiennes.</li>
+        <li><strong>Une bande démo</strong>Des séquences tournées en cours, pour repartir avec des images de toi.</li>
+        <li><strong>Un book photo</strong>Des séances avec des photographes, pour des portraits prêts à partir en casting.</li>
+      </ul>
+      <div class="tarifs">
+        <div class="tarifs-titre"><h3>Tarifs</h3><p>Par mois. Places limitées dans chaque classe.</p></div>
+        <div class="tarifs-liste" id="tarifs-liste"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spectacle" id="spectacle">
+    <img src="images/spectacle.jpg" alt="Salut final des élèves sur scène, mains levées" loading="lazy">
+    <div class="spectacle-texte">
+      <p class="surtitre">Le spectacle de fin d'année</p>
+      <h2>Une représentation publique en fin d'année</h2>
+      <p>Toute l'année, on construit un spectacle ensemble. Fin juin, on le joue devant le public, sur la scène d'un théâtre genevois.</p>
+    </div>
+  </section>
+
+  <section class="bloc agenda" id="agenda">
+    <div class="conteneur">
+      <p class="surtitre">Agenda</p>
+      <h2>Chaque mois, une rencontre avec le métier</h2>
+      <p class="intro">Directeurs de casting, photographes, professionnels du cinéma et du théâtre : ils viennent travailler avec nous, te regarder jouer et te dire ce qu'ils voient. Ouvert à tous les comédiens, élèves d'Atypik ou non.</p>
+      <div class="agenda-liste" id="agenda-liste"></div>
+    </div>
+  </section>
+
+  <section class="galerie">
+    <div class="galerie-photos">
+      <img src="images/stage-1.jpg" alt="Le visage d'une comédienne sur l'écran de contrôle" loading="lazy">
+      <img src="images/stage-2.jpg" alt="Deux comédiens jouent une scène, filmés de près" loading="lazy">
+      <img src="images/stage-4.jpg" alt="Deux comédiennes en scène, cadrées sur l'écran de contrôle" loading="lazy">
+      <img src="images/stage-5.jpg" alt="Un comédien filmé en gros plan" loading="lazy">
+    </div>
+    <p class="legende conteneur">Stage caméra et casting avec Mohamed Belhamar, Genève, août 2026.</p>
+  </section>
+
+  <section class="grandir" id="grandir">
+    <div class="conteneur">
+      <p class="surtitre">Communes, lieux, structures culturelles</p>
+      <h2>Atypik grandit</h2>
+      <p>Les cours se remplissent et les idées débordent. Il nous manque un lieu à nous, à Genève, pour répéter, créer et ouvrir nos portes aux habitants du quartier. Vous avez un espace, ou l'envie de construire quelque chose ensemble ?</p>
+      <a href="#" class="btn btn-plein" data-mail="Un lieu pour Atypik Théâtre">Écrivez-nous</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="conteneur pied-grille">
+    <img src="images/logo-blanc.png" alt="Atypik Théâtre" class="pied-logo">
+    <div>
+      <h3>Contact</h3>
+      <p><a href="#" data-mail="Contact" id="pied-mail"></a></p>
+      <p><a id="pied-insta" target="_blank" rel="noopener">Instagram @atypik.theatre</a></p>
+    </div>
+    <div>
+      <h3>Association</h3>
+      <p>Atypik Théâtre<br>1231 Conches, Genève</p>
+    </div>
+  </div>
+  <p class="pied-bas conteneur">© <span id="annee"></span> Atypik Théâtre. Chaque talent mérite d'être révélé.</p>
+</footer>
+
+<script src="contenu.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
