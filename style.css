@@ -83,7 +83,6 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .est-ouvert { background: var(--noir); color: var(--blanc); }
 .est-ouvert .etiquette { background: var(--orange); }
 .est-complet .carte-jour { color: var(--gris); }
-.est-complet .etiquette { top: -22px; left: auto; right: -16px; z-index: 2; padding: 4px 14px 2px; background: transparent; color: var(--orange); border: 3px solid var(--orange); border-radius: 6px; box-shadow: 0 0 0 2px var(--blanc), 0 0 0 4px var(--orange); font-family: var(--titre); font-size: 2.4rem; letter-spacing: 0.1em; line-height: 1.1; transform: rotate(-12deg); opacity: 0.92; mask-image: repeating-linear-gradient(35deg, #000 0 5px, rgba(0,0,0,0.6) 5px 6px, #000 6px 11px, rgba(0,0,0,0.75) 11px 12px); -webkit-mask-image: repeating-linear-gradient(35deg, #000 0 5px, rgba(0,0,0,0.6) 5px 6px, #000 6px 11px, rgba(0,0,0,0.75) 11px 12px); }
 
 .avantages { background: var(--creme); padding: 56px 0 72px; border-top: 2px solid var(--noir); }
 .plus { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -99,14 +98,18 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .spectacle-texte p:not(.surtitre) { font-size: 1.1rem; }
 
 /* Tarifs */
-.tarifs { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 36px; margin-top: 28px; padding: 22px 28px; background: var(--noir); color: var(--blanc); }
-.tarifs-titre { font-family: var(--titre); font-size: 1.5rem; text-transform: uppercase; letter-spacing: 0.04em; }
-.tarifs-liste { display: flex; flex-wrap: wrap; gap: 12px 36px; }
-.tarif { display: flex; align-items: baseline; gap: 10px; }
-.tarif-prix { font-family: var(--titre); font-size: 2.2rem; line-height: 1; color: var(--orange); }
-.tarif-prix small { font-size: 1rem; color: var(--blanc); }
-.tarif p:last-child { font-size: 0.95rem; }
-.tarifs-note { margin-left: auto; font-size: 0.85rem; color: var(--gris); }
+.tarifs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; padding-top: 36px; border-top: 2px solid var(--noir); }
+.tarifs-titre { grid-column: 1 / -1; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); }
+.tarifs-liste { display: contents; }
+.tarif { padding-left: 28px; border-left: 3px solid var(--orange); }
+.tarif-prix { font-family: var(--titre); font-size: 4.6rem; line-height: 0.95; }
+.tarif-prix small { font-size: 1.5rem; color: var(--orange); }
+.tarif p:last-child { font-weight: 700; margin-top: 4px; }
+.tarifs-note { grid-column: 1 / -1; font-size: 0.9rem; color: var(--gris); }
+
+/* Partenaires : logos */
+.logos { display: flex; flex-wrap: wrap; align-items: center; gap: 32px 56px; margin: 8px 0 36px; }
+.logos img { height: 92px; width: auto; }
 
 /* Agenda */
 .evenement { display: grid; grid-template-columns: 220px 1fr auto; gap: 40px; align-items: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.25); }
@@ -154,8 +157,8 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
   .nav-liens { display: none; }
   .nav { justify-content: space-between; padding: 12px 20px; }
   .nav-logo img { height: 40px; }
-  .cartes, .plus, .lettre-grille, .pied-grille { grid-template-columns: 1fr; }
-  .tarifs-note { margin-left: 0; }
+  .cartes, .plus, .lettre-grille, .pied-grille, .tarifs { grid-template-columns: 1fr; }
+  .logos img { height: 70px; }
   .lettre-grille { gap: 36px; }
   .lettre-portrait img { aspect-ratio: 1 / 1; object-position: center 20%; }
   .galerie-photos { grid-template-columns: repeat(2, 1fr); }
