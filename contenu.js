@@ -16,14 +16,14 @@ window.ATYPIK = {
       jour: "Lundi",
       nom: "Technique",
       description:
-        "Le corps, l'écoute, l'impro. Travail de scène.",
+        "Le corps, l'écoute, l'improvisation. Travail de scène.",
       statut: "complet",
     },
     {
       jour: "Mardi",
       nom: "Caméra",
       description:
-        "Apprivoiser la caméra : casting, self-tape, scènes tournées, écriture.",
+        "Apprivoiser la caméra : casting, self-tape, l'acteur à l'image, écriture.",
       statut: "ouvert",
       note: "Ouverture le 3 novembre",
     },

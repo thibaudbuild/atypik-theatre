@@ -108,8 +108,8 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .tarifs-note { grid-column: 1 / -1; font-size: 0.9rem; color: var(--gris); }
 
 /* Partenaires : logos */
-.logos { display: flex; flex-wrap: wrap; align-items: center; gap: 32px 56px; margin: 8px 0 36px; }
-.logos img { height: 92px; width: auto; }
+.logos { grid-area: logos; display: flex; flex-direction: column; align-items: flex-start; gap: 44px; justify-self: center; }
+.logos img { height: 96px; width: auto; }
 
 /* Agenda */
 .evenement { display: grid; grid-template-columns: 220px 1fr auto; gap: 40px; align-items: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.25); }
@@ -136,6 +136,11 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 
 /* Atypik grandit */
 .grandir { background: var(--orange); padding: 100px 0; }
+.grandir .conteneur { display: grid; grid-template-columns: 1.3fr 1fr; grid-template-areas: "surtitre logos" "titre logos" "texte logos" "bouton logos"; column-gap: 64px; align-items: center; }
+.grandir .surtitre { grid-area: surtitre; }
+.grandir h2 { grid-area: titre; }
+.grandir p:not(.surtitre) { grid-area: texte; }
+.grandir .btn { grid-area: bouton; justify-self: start; }
 .grandir .surtitre { color: var(--noir); }
 .grandir h2 { color: var(--blanc); }
 .grandir p:not(.surtitre) { max-width: 700px; font-size: 1.15rem; font-weight: 500; margin-bottom: 32px; }
@@ -158,6 +163,8 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
   .nav { justify-content: space-between; padding: 12px 20px; }
   .nav-logo img { height: 40px; }
   .cartes, .plus, .lettre-grille, .pied-grille, .tarifs { grid-template-columns: 1fr; }
+  .grandir .conteneur { grid-template-columns: 1fr; grid-template-areas: "surtitre" "titre" "texte" "bouton" "logos"; }
+  .logos { flex-direction: row; flex-wrap: wrap; justify-self: start; gap: 28px 40px; margin-top: 40px; }
   .logos img { height: 70px; }
   .lettre-grille { gap: 36px; }
   .lettre-portrait img { aspect-ratio: 1 / 1; object-position: center 20%; }
