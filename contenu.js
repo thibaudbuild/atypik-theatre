@@ -23,7 +23,7 @@ window.ATYPIK = {
       jour: "Mardi",
       nom: "Caméra",
       description:
-        "Apprivoiser la caméra : casting, self-tape, scènes tournées. Écriture de scènes sur mesure pour la bande démo.",
+        "Apprivoiser la caméra : casting, self-tape, scènes tournées. Écriture de scènes sur mesure pour votre bande démo.",
       statut: "ouvert",
       note: "Ouverture le 3 novembre",
     },
@@ -31,7 +31,7 @@ window.ATYPIK = {
       jour: "Jeudi",
       nom: "Création",
       description:
-        "Construction du personnage, travail du texte, écriture et création collective. Cartes blanches, scénographie, mise en scène.",
+        "Construction du personnage, travail du texte, écriture, création collective, carte blanche.",
       statut: "complet",
     },
   ],
