@@ -5,7 +5,7 @@ Ce dépôt contient le site vitrine d'Atypik Théâtre (association genevoise de
 ## Structure
 
 - `contenu.js` : cours, tarifs, agenda, e-mail. **C'est le fichier à modifier dans 90 % des demandes.**
-- `index.html` : textes fixes de la page (mot de Shawna, spectacle de fin d'année, partenaires).
+- `index.html` : textes fixes de la page (mot de Shawna, spectacle de fin d'année, Mohamed Belhamar, partenaires, mentions légales).
 - `style.css` : design. Ne pas y toucher sauf demande explicite de changement visuel.
 - `script.js` : affichage du contenu. Ne pas y toucher sauf bug.
 - `images/` : photos et logos.

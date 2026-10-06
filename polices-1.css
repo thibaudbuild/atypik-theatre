@@ -1,0 +1,10 @@
+/* Essai de polices 1 : Anton + Manrope */
+:root { --titre: "Anton", Impact, sans-serif; --texte: "Manrope", system-ui, sans-serif; }
+h1, h2, h3, .carte-jour, .accroche, .citation, .signature strong, .evenement-date span, .tarif-prix, .tarifs-titre { letter-spacing: 0; }
+.hero h1 { font-size: clamp(3rem, 9.6vw, 8.4rem); line-height: 0.95; }
+h2 { font-size: clamp(2.2rem, 5.2vw, 4.2rem); line-height: 1.02; }
+.accroche { font-size: clamp(1.7rem, 3.4vw, 2.8rem); line-height: 1.05; }
+.citation { font-size: clamp(1.3rem, 2.3vw, 1.8rem); }
+.carte-jour { font-size: clamp(2.8rem, 4.8vw, 4rem); }
+.evenement-date span { font-size: 3.8rem; }
+.tarif-prix { font-size: 3.8rem; }

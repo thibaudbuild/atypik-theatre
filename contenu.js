@@ -5,7 +5,7 @@
 // ============================================================
 
 window.ATYPIK = {
-  email: "atypiktheatre@gmail.com",
+  email: "atypik.theatre@gmail.com",
   instagram: "https://www.instagram.com/atypik.theatre/",
 
   // --- COURS HEBDOMADAIRES ---

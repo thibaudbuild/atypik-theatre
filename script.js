@@ -76,6 +76,7 @@
   // --- Liens mail et divers ---
   document.querySelectorAll("[data-mail]").forEach((a) => { a.href = mailto(a.dataset.mail); });
   $("pied-insta").href = A.instagram;
+  $("pied-mail-texte").textContent = A.email;
   $("annee").textContent = new Date().getFullYear();
 
   // --- Menu qui se colore au défilement ---
