@@ -22,7 +22,8 @@ Site statique, sans étape de build ni dépendance. Ne pas en ajouter.
 ## Règles
 
 - Toujours écrire avec les accents français. Pas de tiret long.
-- Ton : chaleureux et personnel, jamais administratif. Le site tutoie les comédiens et vouvoie les partenaires (communes, lieux).
+- Ton : professionnel, simple, pédagogique. Pas de ton familier ni de formules accrocheuses. Phrases neutres, sans tutoiement, sauf dans le mot de Shawna (seul texte à la première personne). Le bloc partenaires vouvoie.
+- Ne jamais promettre d'images ou de bande démo livrée : le cours caméra travaille l'écriture de scènes pour la bande démo.
 - Prix en CHF.
 - Ne jamais publier le nombre exact de places par classe : écrire « places limitées ».
 - Ne jamais publier l'adresse exacte des cours : « secteur Plainpalais, adresse communiquée à l'inscription ».

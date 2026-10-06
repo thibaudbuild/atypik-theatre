@@ -16,14 +16,14 @@ window.ATYPIK = {
       jour: "Lundi",
       nom: "Technique",
       description:
-        "Le corps, l'écoute, l'impro. On s'entraîne, on ose, on se trompe, on recommence.",
+        "Le corps, l'écoute, l'impro. Travail de scène.",
       statut: "complet",
     },
     {
       jour: "Mardi",
       nom: "Caméra",
       description:
-        "Apprivoiser la caméra. Castings, self-tapes, scènes tournées : tu repars avec des images pour ta bande démo.",
+        "Apprivoiser la caméra : casting, self-tape, scènes tournées. Écriture de scènes sur mesure pour la bande démo.",
       statut: "ouvert",
       note: "Ouverture le 3 novembre",
     },
@@ -31,7 +31,7 @@ window.ATYPIK = {
       jour: "Jeudi",
       nom: "Création",
       description:
-        "Construire un personnage, défendre un texte, écrire le sien, créer ensemble.",
+        "Construction du personnage, travail du texte, écriture et création collective. Cartes blanches, scénographie, mise en scène.",
       statut: "complet",
     },
   ],
@@ -54,7 +54,7 @@ window.ATYPIK = {
       titre: "Soirée avec Mohamed Belhamar",
       sousTitre: "Directeur de casting",
       description:
-        "Une soirée pour poser toutes les questions qu'on n'ose jamais poser en casting : ce qu'il regarde, ce qu'il attend, ce qui fait la différence.",
+        "Une soirée de questions-réponses avec un directeur de casting : son métier, ce qu'il regarde, ce qu'il attend d'un comédien.",
       lieu: "TAMCO, Genève",
       horaire: "En soirée",
       prix: "Gratuit, sur inscription",
@@ -67,7 +67,7 @@ window.ATYPIK = {
       titre: "Caméra & casting avec Mohamed Belhamar",
       sousTitre: "Directeur de casting",
       description:
-        "Trois jours face à la caméra avec un directeur de casting : des scènes de cinéma, une mise en situation, et un retour sincère sur ton travail.",
+        "Trois jours de travail face caméra : scènes de cinéma, mise en situation de casting et retours personnalisés.",
       lieu: "Genève, secteur Plainpalais",
       horaire: "10h à 17h",
       prix: "300 CHF (250 CHF pour les élèves Atypik)",
