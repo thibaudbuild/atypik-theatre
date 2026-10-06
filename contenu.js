@@ -16,7 +16,7 @@ window.ATYPIK = {
       jour: "Lundi",
       nom: "Technique",
       description:
-        "Le corps, l'écoute, l'improvisation. Travail de scène.",
+        "Le corps, l'écoute, improvisation. Travail de scène.",
       statut: "complet",
     },
     {
@@ -63,6 +63,19 @@ window.ATYPIK = {
     {
       debut: "2026-11-13",
       fin: "2026-11-15",
+      type: "Stage",
+      titre: "Caméra & casting avec Mohamed Belhamar",
+      sousTitre: "Directeur de casting",
+      description:
+        "Trois jours de travail face caméra : scènes de cinéma, mise en situation de casting et retours personnalisés.",
+      lieu: "Genève, secteur Plainpalais",
+      horaire: "10h à 17h",
+      prix: "300 CHF (250 CHF pour les élèves Atypik)",
+      placesLimitees: true,
+    },
+    {
+      debut: "2026-12-05",
+      fin: "2026-12-07",
       type: "Stage",
       titre: "Caméra & casting avec Mohamed Belhamar",
       sousTitre: "Directeur de casting",
