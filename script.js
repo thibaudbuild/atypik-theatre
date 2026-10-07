@@ -13,12 +13,17 @@
     "Bonjour,\n\nJe souhaite m'inscrire : " + quoi +
     ".\n\nNom et prénom :\nTéléphone :\nMon parcours en quelques lignes :\n\nMerci !";
 
+  const corpsCandidature = (quoi) =>
+    "Bonjour,\n\nJe souhaite postuler : " + quoi +
+    ".\n\nNom et prénom :\nTéléphone :\nLien vers ma vidéo de présentation (2 à 3 minutes, via SwissTransfer, WeTransfer ou un lien privé) :\n\nMerci !";
+
   // --- Cours ---
   $("cours-liste").innerHTML = A.cours.map((c) => {
     const complet = c.statut === "complet";
-    const objet = complet
-      ? "Liste d'attente : cours du " + c.jour.toLowerCase() + " (" + c.nom + ")"
-      : "Inscription : cours du " + c.jour.toLowerCase() + " (" + c.nom + ")";
+    const video = !complet && c.admission === "video";
+    const quoi = "cours du " + c.jour.toLowerCase() + " (" + c.nom + ")";
+    const objet = complet ? "Liste d'attente : " + quoi : video ? "Candidature : " + quoi : "Inscription : " + quoi;
+    const corps = video ? corpsCandidature(quoi) : corpsInscription(quoi);
     return `
       <article class="carte ${complet ? "est-complet" : "est-ouvert"}">
         <span class="etiquette">${complet ? "Complet" : c.note || "Inscriptions ouvertes"}</span>
@@ -26,8 +31,8 @@
         <h3>${c.nom}</h3>
         <p class="carte-texte">${c.description}</p>
         <a class="btn ${complet ? "btn-contour" : "btn-plein"}"
-           href="${mailto(objet, corpsInscription("cours du " + c.jour.toLowerCase() + " (" + c.nom + ")"))}">
-          ${complet ? "Rejoindre la liste d'attente" : "S'inscrire"}
+           href="${mailto(objet, corps)}">
+          ${complet ? "Rejoindre la liste d'attente" : video ? "Postuler" : "S'inscrire"}
         </a>
       </article>`;
   }).join("");

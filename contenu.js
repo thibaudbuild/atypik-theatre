@@ -11,6 +11,7 @@ window.ATYPIK = {
   // --- COURS HEBDOMADAIRES ---
   // statut : "complet" ou "ouvert"
   // note   : petit texte affiché sur l'étiquette quand le cours est ouvert
+  // admission : "video" si le cours se rejoint sur vidéo de présentation (bouton "Postuler")
   cours: [
     {
       jour: "Lundi",
@@ -26,6 +27,7 @@ window.ATYPIK = {
         "Apprivoiser la caméra : casting, self-tape, l'acteur à l'image, écriture.",
       statut: "ouvert",
       note: "Ouverture le 3 novembre",
+      admission: "video",
     },
     {
       jour: "Jeudi",

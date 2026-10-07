@@ -15,7 +15,7 @@ Site statique, sans étape de build ni dépendance. Ne pas en ajouter.
 ## Demandes courantes
 
 - **Ajouter un stage ou une rencontre** : ajouter un bloc dans `agenda` de `contenu.js`, en copiant la forme d'un bloc existant. Dates au format `AAAA-MM-JJ`. Les événements passés disparaissent tout seuls du site, inutile de les supprimer.
-- **Un cours est complet / rouvre** : changer `statut` en `"complet"` ou `"ouvert"` dans `cours`.
+- **Un cours est complet / rouvre** : changer `statut` en `"complet"` ou `"ouvert"` dans `cours`. Un cours avec `admission: "video"` affiche « Postuler » et demande une vidéo de présentation.
 - **Changer un tarif** : modifier `prix` dans `tarifs`.
 - **Changer une photo** : placer la nouvelle image dans `images/` (JPG, 1600 px de large maximum) et remplacer le nom du fichier dans `index.html`.
 
