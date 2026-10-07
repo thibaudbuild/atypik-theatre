@@ -29,5 +29,6 @@ Site statique, sans étape de build ni dépendance. Ne pas en ajouter.
 - Ne jamais publier l'adresse exacte des cours : « secteur Plainpalais, adresse communiquée à l'inscription ».
 - Les inscriptions passent par e-mail (boutons `mailto`). Ne pas ajouter de formulaire ni de paiement en ligne sans demande explicite.
 - Ne publier une photo où des personnes sont reconnaissables que si Shawna confirme avoir leur accord (accord des parents pour les mineurs).
-- Garder la palette (orange `#e44607`, noir, crème) et les polices existantes.
+- Garder la palette (orange `#e44607`, noir, crème) et les polices existantes (Bebas Neue pour le slogan, les jours et les chiffres ; Oswald pour les titres ; DM Sans pour le texte).
+- Le site est publié sur https://atypiktheatre.ch via GitHub Pages : chaque modification poussée sur `main` est en ligne en une à deux minutes.
 - Après chaque modification, résumer en une phrase ce qui a changé et où le voir sur le site.
