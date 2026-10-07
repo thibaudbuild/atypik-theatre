@@ -103,6 +103,9 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .candidature .btn { margin-top: 6px; }
 .candidature-adresse { font-size: 0.9rem; color: var(--gris); margin-top: 14px; }
 .candidature-adresse span { color: var(--noir); font-weight: 700; user-select: all; }
+.secours pre { white-space: pre-wrap; font-family: var(--texte); font-size: 0.9rem; background: var(--blanc); padding: 14px 16px; border-left: 3px solid var(--orange); max-height: 220px; overflow: auto; }
+.secours-note { font-size: 0.85rem; color: var(--gris); margin-top: 18px; }
+.secours-copier { padding: 8px 14px; font-size: 0.78rem; margin-left: 6px; }
 .candidature-fermer { position: absolute; top: 10px; right: 14px; width: 36px; height: 36px; border: 0; background: none; font-size: 1.8rem; line-height: 1; cursor: pointer; color: var(--noir); }
 
 /* Tarifs */

@@ -79,8 +79,8 @@ window.ATYPIK = {
       debut: "2026-12-05",
       fin: "2026-12-07",
       type: "Stage",
-      titre: "Caméra & casting avec Mohamed Belhamar",
-      sousTitre: "Directeur de casting",
+      titre: "L'approche du casting à la caméra",
+      sousTitre: "Avec Mohamed Belhamar, directeur de casting",
       description:
         "Trois jours de travail face caméra : scènes de cinéma, mise en situation de casting et retours personnalisés.",
       lieu: "Genève, secteur Plainpalais",

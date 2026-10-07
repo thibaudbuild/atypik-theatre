@@ -92,6 +92,31 @@
 
   // --- Liens mail et divers ---
   document.querySelectorAll("[data-mail]").forEach((a) => { a.href = mailto(a.dataset.mail); });
+
+  // --- Secours si le mailto ne réagit pas (ordinateur sans logiciel de mail) ---
+  // Si la page garde le focus 1,5 s après le clic, aucune messagerie ne s'est ouverte : on propose Gmail ou la copie.
+  const secours = $("secours");
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href^="mailto:"]');
+    if (!a || a.hasAttribute("data-candidature")) return;
+    const url = new URL(a.href);
+    const objet = url.searchParams.get("subject") || "";
+    const corps = url.searchParams.get("body") || "";
+    const minuterie = setTimeout(() => {
+      $("secours-gmail").href = "https://mail.google.com/mail/?view=cm&to=" + encodeURIComponent(A.email) +
+        "&su=" + encodeURIComponent(objet) + "&body=" + encodeURIComponent(corps);
+      $("secours-adresse").textContent = A.email;
+      $("secours-texte").textContent = "Objet : " + objet + "\n\n" + corps;
+      secours.showModal();
+    }, 1500);
+    const annule = () => clearTimeout(minuterie);
+    window.addEventListener("blur", annule, { once: true });
+    document.addEventListener("visibilitychange", annule, { once: true });
+  });
+  secours.addEventListener("click", (e) => { if (e.target === secours) secours.close(); });
+  $("secours-copier").addEventListener("click", () => {
+    navigator.clipboard.writeText(A.email).then(() => { $("secours-copier").textContent = "Copiée"; });
+  });
   $("pied-insta").href = A.instagram;
   $("annee").textContent = new Date().getFullYear();
 
