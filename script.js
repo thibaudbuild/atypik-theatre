@@ -30,7 +30,7 @@
         <p class="carte-jour">${c.jour}</p>
         <h3>${c.nom}</h3>
         <p class="carte-texte">${c.description}</p>
-        <a class="btn ${complet ? "btn-contour" : "btn-plein"}"
+        <a class="btn ${complet ? "btn-contour" : "btn-plein"}" ${video ? "data-candidature" : ""}
            href="${mailto(objet, corps)}">
           ${complet ? "Rejoindre la liste d'attente" : video ? "Postuler" : "S'inscrire"}
         </a>
@@ -77,6 +77,18 @@
         </article>`;
       }).join("")
     : `<p class="agenda-vide">Les prochaines dates seront annoncées sur <a href="${A.instagram}" target="_blank" rel="noopener">Instagram</a>.</p>`;
+
+  // --- Candidature vidéo : petite fenêtre avec la trame, puis mail ---
+  const boite = $("candidature");
+  document.querySelectorAll("[data-candidature]").forEach((a) => {
+    a.addEventListener("click", (e) => {
+      e.preventDefault();
+      $("candidature-mail").href = a.href;
+      $("candidature-adresse").textContent = A.email;
+      boite.showModal();
+    });
+  });
+  boite.addEventListener("click", (e) => { if (e.target === boite) boite.close(); });
 
   // --- Liens mail et divers ---
   document.querySelectorAll("[data-mail]").forEach((a) => { a.href = mailto(a.dataset.mail); });

@@ -119,7 +119,7 @@
         <div><dt>Quand ont lieu les cours ?</dt><dd>Les cours ont lieu le soir, de 19h à 22h, le lundi, le mardi et le jeudi. Chaque séance dure trois heures. On s'inscrit à un cours fixe, que l'on suit toute l'année avec le même groupe.</dd></div>
         <div><dt>Où ont lieu les cours ?</dt><dd>Les cours ont lieu à Genève, dans le quartier de Plainpalais, à la Maison Internationale des Associations. Les éventuels changements de salle vous sont communiqués dans le groupe WhatsApp de la classe.</dd></div>
         <div><dt>Quand peut-on s'inscrire ?</dt><dd>L'année a commencé à la mi-septembre et se termine fin juin, avec le spectacle. Nous acceptons de nouveaux élèves jusqu'en janvier, tant qu'il reste de la place : nos classes sont volontairement petites, et plusieurs sont déjà complètes. Au-delà, nous vous inscrivons sur la liste d'attente, pour la rentrée suivante ou pour la prochaine ouverture de classe.</dd></div>
-        <div><dt>Peut-on essayer avant de s'inscrire ?</dt><dd>Oui. Pour les cours du lundi et du jeudi, le premier cours est gratuit et sans engagement : vous venez, vous travaillez avec le groupe, et vous décidez ensuite. Le cours caméra du mardi fonctionne différemment : l'admission se fait sur vidéo. Vous nous envoyez une présentation de deux à trois minutes, face caméra, filmée simplement avec un téléphone : qui vous êtes, ce que vous avez fait, et pourquoi vous voulez rejoindre Atypik. C'est déjà un premier exercice.</dd></div>
+        <div><dt>Peut-on essayer avant de s'inscrire ?</dt><dd>Oui. Pour les cours du lundi et du jeudi, le premier cours est gratuit et sans engagement : vous venez, vous travaillez avec le groupe, et vous décidez ensuite. Le cours caméra du mardi fonctionne différemment : l'admission se fait sur candidature, sous la forme d'une vidéo de présentation de deux à trois minutes, face caméra, filmée simplement avec un téléphone : qui vous êtes, ce que vous avez fait, et pourquoi vous voulez rejoindre Atypik. C'est déjà un premier exercice.</dd></div>
         <div><dt>Combien coûtent les cours et comment paie-t-on ?</dt><dd>Un cours par semaine coûte 170 CHF par mois, deux cours 300 CHF, trois cours 350 CHF. Le règlement se fait par virement sur le compte de l'association, avant le 5 de chaque mois. Vous pouvez aussi régler par trimestre ou pour l'année entière.</dd></div>
         <div><dt>Peut-on arrêter en cours d'année ?</dt><dd>Oui, en nous prévenant un mois à l'avance. À partir de février, la classe entre dans la préparation du spectacle de fin d'année et chaque rôle compte : les arrêts ne sont alors plus possibles, sauf certificat médical.</dd></div>
         <div><dt>Que se passe-t-il en fin d'année ?</dt><dd>Chaque classe présente un spectacle en public, fin juin, sur la scène d'un théâtre genevois. Ce spectacle fait partie de la formation : il se prépare pendant le second semestre et tous les élèves y participent.</dd></div>
@@ -168,6 +168,21 @@
 
 <!-- COMPARATEUR : barre provisoire, à retirer une fois le choix fait. -->
 <nav style="position:fixed;z-index:99;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:4px;padding:5px;background:#111;border:1px solid #555;border-radius:999px;font:700 12px/1 system-ui,sans-serif;box-shadow:0 6px 24px rgba(0,0,0,.35)"><a href="index.html" style="padding:9px 14px;border-radius:999px;text-decoration:none;background:#e44607;color:#fff">Tout en capitales</a><a href="m.html" style="padding:9px 14px;border-radius:999px;text-decoration:none;color:#ddd">Titres en minuscules</a></nav>
+
+<dialog class="candidature" id="candidature">
+  <form method="dialog"><button class="candidature-fermer" aria-label="Fermer">×</button></form>
+  <p class="surtitre">Cours caméra du mardi</p>
+  <h3>Postuler avec une vidéo</h3>
+  <p>L'admission se fait sur une vidéo de présentation de deux à trois minutes, face caméra, filmée simplement avec un téléphone. C'est déjà un premier exercice.</p>
+  <ol>
+    <li>Qui vous êtes.</li>
+    <li>Ce que vous avez fait : formations, scène, tournages.</li>
+    <li>Pourquoi vous voulez rejoindre Atypik.</li>
+  </ol>
+  <p>Envoyez-nous le lien de la vidéo par e-mail (SwissTransfer, WeTransfer ou lien privé), avec votre nom et votre téléphone.</p>
+  <a class="btn btn-plein" id="candidature-mail" href="#">Envoyer ma candidature</a>
+  <p class="candidature-adresse">ou directement à <span id="candidature-adresse"></span></p>
+</dialog>
 
 <script src="contenu.js"></script>
 <script src="script.js"></script>
