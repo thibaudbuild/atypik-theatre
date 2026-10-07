@@ -138,6 +138,12 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .galerie img:nth-child(4) { object-position: 82% center; }
 .legende { margin-top: 14px; font-size: 0.85rem; color: var(--gris); }
 
+/* Questions fréquentes */
+.faq { background: var(--creme); padding: 110px 0; }
+.faq-liste { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 56px; margin-top: 16px; }
+.faq dt { font-family: var(--titre); font-size: 1.6rem; line-height: 1.05; text-transform: uppercase; margin-bottom: 8px; }
+.faq dd { font-size: 1rem; }
+
 /* Atypik grandit */
 .grandir { background: var(--orange); padding: 100px 0; }
 .grandir .conteneur { display: grid; grid-template-columns: 1.3fr 1fr; grid-template-areas: "surtitre logos" "titre logos" "texte logos" "bouton logos"; column-gap: 64px; align-items: center; }
@@ -177,7 +183,8 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
   .galerie-photos { grid-template-columns: repeat(2, 1fr); }
   .evenement { grid-template-columns: 1fr; gap: 20px; }
   .evenement .btn { justify-self: start; }
-  .bloc, .lettre, .grandir { padding: 72px 0; }
+  .bloc, .lettre, .grandir, .faq { padding: 72px 0; }
+  .faq-liste { grid-template-columns: 1fr; gap: 28px; }
   .spectacle img { object-position: center 70%; }
   .spectacle-texte { top: 32px; }
   .vedette { grid-template-columns: 1fr; gap: 28px; }

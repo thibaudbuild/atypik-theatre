@@ -9,3 +9,4 @@ h2 { font-size: clamp(2rem, 4.6vw, 3.6rem); }
 .pied h3 { font-size: 1.1rem; }
 .surtitre { letter-spacing: 0.14em; }
 .spectacle-texte h2 { font-size: clamp(1.8rem, 3.6vw, 2.9rem); }
+.faq dt { font-family: "Oswald", sans-serif; font-weight: 500; text-transform: none; font-size: 1.25rem; }
