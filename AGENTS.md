@@ -15,7 +15,7 @@ Site statique, sans étape de build ni dépendance. Ne pas en ajouter.
 ## Demandes courantes
 
 - **Ajouter un stage ou une rencontre** : ajouter un bloc dans `agenda` de `contenu.js`, en copiant la forme d'un bloc existant. Dates au format `AAAA-MM-JJ`. Les événements passés disparaissent tout seuls du site, inutile de les supprimer.
-- **Mettre à jour les vacances** : chaque été, remplacer les périodes du bloc `vacances` de `contenu.js` par celles du calendrier scolaire genevois (ge.ch). Les jours fériés isolés ne s'y mettent pas : il y a cours. Les périodes passées disparaissent toutes seules.
+- **Mettre à jour la saison** : chaque été, changer la date de rentrée et de fin dans `saison` de `contenu.js` (mettre `finLibelle: ""` dès que la date de fin exacte est connue), puis remplacer les périodes du bloc `vacances` par celles du calendrier scolaire genevois (ge.ch). Les jours fériés isolés ne s'y mettent pas : il y a cours. Les périodes passées disparaissent toutes seules.
 - **Un cours est complet / rouvre** : changer `statut` en `"complet"` ou `"ouvert"` dans `cours`. Un cours avec `admission: "video"` affiche « Postuler » et demande une vidéo de présentation.
 - **Changer un tarif** : modifier `prix` dans `tarifs`.
 - **Changer une photo** : placer la nouvelle image dans `images/` (JPG, 1600 px de large maximum) et remplacer le nom du fichier dans `index.html`.
