@@ -123,13 +123,13 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .relache-tete p { font-size: 0.9rem; color: var(--gris); }
 .frise { position: relative; height: 130px; }
 .frise-rail { position: absolute; left: 0; right: 0; top: 70px; height: 14px; background: var(--noir); }
-.frise-mois { position: absolute; top: 96px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); }
+.frise-mois { position: absolute; left: calc(var(--a) * 1%); top: 96px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); }
 .frise-mois::before { content: ""; position: absolute; left: 0; top: -12px; width: 1px; height: 8px; background: var(--gris); }
-.frise-borne { position: absolute; top: 60px; width: 2px; height: 24px; background: var(--noir); }
+.frise-borne { position: absolute; left: calc(var(--a) * 1%); top: 60px; width: 2px; height: 24px; background: var(--noir); }
 .frise-borne .frise-lbl b { color: var(--noir); }
 .est-fin { transform: translateX(-100%); }
 .est-fin .frise-lbl { left: auto; right: 0; text-align: right; }
-.frise-pause { position: absolute; top: 70px; height: 14px; background: var(--orange); }
+.frise-pause { position: absolute; left: calc(var(--a) * 1%); width: calc(var(--l) * 1%); top: 70px; height: 14px; background: var(--orange); }
 .frise-pause::before { content: ""; position: absolute; left: 0; top: -10px; width: 2px; height: 10px; background: var(--orange); }
 .frise-lbl { position: absolute; bottom: 24px; left: 0; white-space: nowrap; }
 .frise-lbl span { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
@@ -177,6 +177,7 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .faq-liste { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 56px; margin-top: 16px; }
 .faq dt { font-family: var(--titre); font-size: 1.6rem; line-height: 1.05; text-transform: uppercase; margin-bottom: 8px; }
 .faq dd { font-size: 1rem; }
+.insecable { white-space: nowrap; }
 
 /* Atypik grandit */
 .partenaires { background: var(--orange); padding: 100px 0; }
@@ -210,15 +211,20 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
   .nav-liens { display: none; }
   .nav { justify-content: space-between; padding: 12px 20px; }
   .nav-logo img { height: 40px; }
-  .cartes, .lettre-grille, .pied-grille, .tarifs { grid-template-columns: 1fr; }
-  .frise { height: auto; display: grid; gap: 14px; }
-  .frise-rail, .frise-mois { display: none; }
-  .frise-pause, .frise-borne { position: static; width: auto !important; height: auto; background: none; padding-left: 16px; border-left: 3px solid var(--orange); }
+  .cartes, .lettre-grille, .tarifs { grid-template-columns: 1fr; }
+  .pied-grille { grid-template-columns: 1fr 1fr; }
+  .pied-logo { grid-column: 1 / -1; }
+  .frise { height: 600px; margin-bottom: 56px; }
+  .frise-rail { left: 60px; right: auto; top: 0; bottom: 0; width: 14px; height: auto; }
+  .frise-mois { left: 0; top: calc(var(--a) * 1%); transform: translateY(-50%); }
+  .frise-mois::before { display: none; }
+  .frise-pause { left: 60px; width: 14px; top: calc(var(--a) * 1%); height: calc(var(--l) * 1%); min-height: 8px; }
   .frise-pause::before { display: none; }
-  .frise-borne { border-color: var(--noir); }
-  .est-fin { transform: none; }
-  .est-fin .frise-lbl { text-align: left; }
-  .frise-lbl { position: static; }
+  .frise-borne { left: 54px; width: 26px; height: 2px; top: calc(var(--a) * 1%); }
+  .est-fin { transform: translateY(-100%); }
+  .frise-lbl { left: 32px; bottom: auto; top: -6px; }
+  .frise-borne .frise-lbl { left: 38px; }
+  .est-fin .frise-lbl { right: auto; top: 6px; text-align: left; }
   .est-passee { border-color: var(--gris); }
   .partenaires .conteneur { grid-template-columns: 1fr; grid-template-areas: "surtitre" "titre" "texte" "bouton" "logos"; }
   .logos { flex-direction: row; flex-wrap: wrap; justify-self: start; gap: 28px 40px; margin-top: 40px; }

@@ -98,15 +98,15 @@
       </div>
       <div class="frise">
         <div class="frise-rail"></div>
-        ${moisFrise.map((m) => `<span class="frise-mois" style="left:${pct(m)}%">${abrege[m.getMonth()]}</span>`).join("")}
-        <div class="frise-borne" style="left:0"><div class="frise-lbl"><span>Rentrée</span><b>${court(d0)}</b></div></div>
+        ${moisFrise.map((m) => `<span class="frise-mois" style="--a:${pct(m)}">${abrege[m.getMonth()]}</span>`).join("")}
+        <div class="frise-borne" style="--a:0"><div class="frise-lbl"><span>Rentrée</span><b>${court(d0)}</b></div></div>
         ${pauses.map((v) => {
           const d = jour(v.debut), f = new Date(jour(v.fin).getTime() + 86400000);
-          return `<div class="frise-pause${f < aujourdhui ? " est-passee" : ""}" style="left:${pct(d)}%;width:${pct(f) - pct(d)}%">
+          return `<div class="frise-pause${f < aujourdhui ? " est-passee" : ""}" style="--a:${pct(d)};--l:${pct(f) - pct(d)}">
             <div class="frise-lbl"><span>${v.nom}</span><b>${libelle(v)}</b></div>
           </div>`;
         }).join("")}
-        <div class="frise-borne est-fin" style="left:100%"><div class="frise-lbl"><span>Fin de l'année</span><b>${A.saison.finLibelle || court(jour(A.saison.fin))}</b></div></div>
+        <div class="frise-borne est-fin" style="--a:100"><div class="frise-lbl"><span>Fin de l'année</span><b>${A.saison.finLibelle || court(jour(A.saison.fin))}</b></div></div>
       </div>`;
   }
 
