@@ -214,7 +214,7 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
   .cartes, .lettre-grille, .tarifs { grid-template-columns: 1fr; }
   .pied-grille { grid-template-columns: 1fr 1fr; }
   .pied-logo { grid-column: 1 / -1; }
-  .frise { height: 600px; margin-bottom: 56px; }
+  .frise { height: 600px; margin-bottom: 96px; }
   .frise-rail { left: 60px; right: auto; top: 0; bottom: 0; width: 14px; height: auto; }
   .frise-mois { left: 0; top: calc(var(--a) * 1%); transform: translateY(-50%); }
   .frise-mois::before { display: none; }
