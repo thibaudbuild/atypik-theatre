@@ -78,20 +78,36 @@
       }).join("")
     : `<p class="agenda-vide">Les prochaines dates seront annoncées sur <a href="${A.instagram}" target="_blank" rel="noopener">Instagram</a>.</p>`;
 
-  // --- Vacances (pas de cours ; les périodes passées disparaissent) ---
-  const num = (d) => (d.getDate() === 1 ? "1er" : d.getDate());
-  const periode = (v) => {
-    const d = jour(v.debut), f = jour(v.fin);
-    const debut = d.getMonth() === f.getMonth() ? num(d) : num(d) + " " + mois[d.getMonth()];
-    return "du " + debut + " au " + num(f) + " " + mois[f.getMonth()] + " " + f.getFullYear();
-  };
-  const pauses = A.vacances.filter((v) => jour(v.fin) >= aujourdhui).sort((a, b) => a.debut.localeCompare(b.debut));
-  $("vacances").innerHTML = pauses.length
-    ? `<p class="tarifs-titre">Vacances : pas de cours</p>
-       <table><thead><tr><th>Période</th><th>Dates</th></tr></thead>
-       <tbody>${pauses.map((v) => `<tr><td>${v.nom}</td><td>${periode(v)}</td></tr>`).join("")}</tbody></table>
-       <p class="tarifs-note">Mêmes dates que les vacances scolaires genevoises.</p>`
-    : "";
+  // --- Relâche : frise de la saison, de septembre à juin ---
+  const abrege = ["janv", "févr", "mars", "avr", "mai", "juin", "juil", "août", "sept", "oct", "nov", "déc"];
+  const pauses = A.vacances.slice().sort((a, b) => a.debut.localeCompare(b.debut));
+  if (pauses.length) {
+    const premiere = jour(pauses[0].debut);
+    const anneeDebut = premiere.getMonth() >= 7 ? premiere.getFullYear() : premiere.getFullYear() - 1;
+    const d0 = new Date(anneeDebut, 8, 1), d1 = new Date(anneeDebut + 1, 6, 1);
+    const pct = (d) => ((d - d0) / (d1 - d0)) * 100;
+    const lendemain = (d) => new Date(d.getTime() + 86400000);
+    const libelle = (v) => {
+      const d = jour(v.debut), f = jour(v.fin);
+      return (d.getMonth() === f.getMonth() ? d.getDate() : d.getDate() + " " + abrege[d.getMonth()]) + " – " + f.getDate() + " " + abrege[f.getMonth()];
+    };
+    const moisFrise = Array.from({ length: 10 }, (_, i) => new Date(anneeDebut, 8 + i, 1));
+    $("relache").innerHTML = `
+      <div class="relache-tete">
+        <h3>La saison, de septembre à juin</h3>
+        <p>En orange : pas de cours, mêmes dates que les vacances scolaires genevoises.</p>
+      </div>
+      <div class="frise">
+        <div class="frise-rail"></div>
+        ${moisFrise.map((m) => `<span class="frise-mois" style="left:${pct(m)}%">${abrege[m.getMonth()]}</span>`).join("")}
+        ${pauses.map((v) => {
+          const d = jour(v.debut), f = lendemain(jour(v.fin));
+          return `<div class="frise-pause${f < aujourdhui ? " est-passee" : ""}" style="left:${pct(d)}%;width:${pct(f) - pct(d)}%">
+            <div class="frise-lbl"><span>${v.nom}</span><b>${libelle(v)}</b></div>
+          </div>`;
+        }).join("")}
+      </div>`;
+  }
 
   // --- Candidature vidéo : petite fenêtre avec la trame, puis mail ---
   const boite = $("candidature");

@@ -117,13 +117,21 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .tarif-prix small { font-size: 1.5rem; color: var(--orange); }
 .tarif p:last-child { font-weight: 700; margin-top: 4px; }
 .tarifs-note { grid-column: 1 / -1; font-size: 0.9rem; color: var(--gris); }
-.vacances { margin-top: 40px; padding-top: 36px; border-top: 2px solid var(--noir); }
-.vacances:empty { display: none; }
-.vacances .tarifs-titre { margin-bottom: 16px; }
-.vacances table { border-collapse: collapse; width: 100%; max-width: 640px; margin-bottom: 16px; }
-.vacances th { text-align: left; padding: 10px 0; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris); border-bottom: 2px solid var(--noir); }
-.vacances td { padding: 12px 0; border-bottom: 1px solid rgba(11, 11, 11, 0.15); vertical-align: top; }
-.vacances td:first-child { font-weight: 700; padding-right: 40px; white-space: nowrap; }
+.relache { margin-top: 40px; padding-top: 36px; border-top: 2px solid var(--noir); }
+.relache-tete { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; flex-wrap: wrap; margin-bottom: 28px; }
+.relache-tete h3 { font-size: 2.4rem; }
+.relache-tete p { font-size: 0.9rem; color: var(--gris); }
+.frise { position: relative; height: 130px; }
+.frise-rail { position: absolute; left: 0; right: 0; top: 70px; height: 14px; background: var(--noir); }
+.frise-mois { position: absolute; top: 96px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); }
+.frise-mois::before { content: ""; position: absolute; left: 0; top: -12px; width: 1px; height: 8px; background: var(--gris); }
+.frise-pause { position: absolute; top: 70px; height: 14px; background: var(--orange); }
+.frise-pause::before { content: ""; position: absolute; left: 0; top: -10px; width: 2px; height: 10px; background: var(--orange); }
+.frise-lbl { position: absolute; bottom: 24px; left: 0; white-space: nowrap; }
+.frise-lbl span { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+.frise-lbl b { display: block; font-family: var(--titre); font-weight: 400; font-size: 1.8rem; line-height: 0.9; text-transform: uppercase; color: var(--orange); }
+.est-passee, .est-passee::before, .est-passee .frise-lbl b { background-color: var(--gris); color: var(--gris); }
+.est-passee .frise-lbl b { background: none; }
 
 /* Partenaires : logos */
 .logos { grid-area: logos; display: flex; flex-direction: column; align-items: flex-start; gap: 44px; justify-self: center; }
@@ -199,6 +207,12 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
   .nav { justify-content: space-between; padding: 12px 20px; }
   .nav-logo img { height: 40px; }
   .cartes, .lettre-grille, .pied-grille, .tarifs { grid-template-columns: 1fr; }
+  .frise { height: auto; display: grid; gap: 14px; }
+  .frise-rail, .frise-mois { display: none; }
+  .frise-pause { position: static; width: auto !important; height: auto; background: none; padding-left: 16px; border-left: 3px solid var(--orange); }
+  .frise-pause::before { display: none; }
+  .frise-lbl { position: static; }
+  .est-passee { border-color: var(--gris); }
   .grandir .conteneur { grid-template-columns: 1fr; grid-template-areas: "surtitre" "titre" "texte" "bouton" "logos"; }
   .logos { flex-direction: row; flex-wrap: wrap; justify-self: start; gap: 28px 40px; margin-top: 40px; }
   .logos img { height: 70px; }
