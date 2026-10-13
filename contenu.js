@@ -45,6 +45,11 @@ window.ATYPIK = {
     { formule: "3 cours par semaine", prix: 350 },
   ],
 
+  // --- SAISON ---
+  // rentree : premier cours de l'année. fin : dernier jour (date indicative tant qu'elle n'est pas fixée,
+  // le site affiche alors finLibelle ; mettre finLibelle: "" quand la date exacte est connue).
+  saison: { rentree: "2026-09-14", fin: "2027-06-30", finLibelle: "fin juin" },
+
   // --- VACANCES (pas de cours) ---
   // Mêmes dates que les vacances scolaires genevoises (calendrier officiel sur ge.ch).
   // Une période disparaît toute seule du site une fois passée.

@@ -125,6 +125,10 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .frise-rail { position: absolute; left: 0; right: 0; top: 70px; height: 14px; background: var(--noir); }
 .frise-mois { position: absolute; top: 96px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); }
 .frise-mois::before { content: ""; position: absolute; left: 0; top: -12px; width: 1px; height: 8px; background: var(--gris); }
+.frise-borne { position: absolute; top: 60px; width: 2px; height: 24px; background: var(--noir); }
+.frise-borne .frise-lbl b { color: var(--noir); }
+.est-fin { transform: translateX(-100%); }
+.est-fin .frise-lbl { left: auto; right: 0; text-align: right; }
 .frise-pause { position: absolute; top: 70px; height: 14px; background: var(--orange); }
 .frise-pause::before { content: ""; position: absolute; left: 0; top: -10px; width: 2px; height: 10px; background: var(--orange); }
 .frise-lbl { position: absolute; bottom: 24px; left: 0; white-space: nowrap; }
@@ -175,16 +179,16 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .faq dd { font-size: 1rem; }
 
 /* Atypik grandit */
-.grandir { background: var(--orange); padding: 100px 0; }
-.grandir .conteneur { display: grid; grid-template-columns: 1.3fr 1fr; grid-template-areas: "surtitre logos" "titre logos" "texte logos" "bouton logos"; column-gap: 64px; align-items: center; }
-.grandir .surtitre { grid-area: surtitre; }
-.grandir h2 { grid-area: titre; }
-.grandir p:not(.surtitre) { grid-area: texte; }
-.grandir .btn { grid-area: bouton; justify-self: start; }
-.grandir .surtitre { color: var(--noir); }
-.grandir h2 { color: var(--blanc); }
-.grandir p:not(.surtitre) { max-width: 700px; font-size: 1.15rem; font-weight: 500; margin-bottom: 32px; }
-.grandir .btn-plein { background: var(--noir); }
+.partenaires { background: var(--orange); padding: 100px 0; }
+.partenaires .conteneur { display: grid; grid-template-columns: 1.3fr 1fr; grid-template-areas: "surtitre logos" "titre logos" "texte logos" "bouton logos"; column-gap: 64px; align-items: center; }
+.partenaires .surtitre { grid-area: surtitre; }
+.partenaires h2 { grid-area: titre; }
+.partenaires p:not(.surtitre) { grid-area: texte; }
+.partenaires .btn { grid-area: bouton; justify-self: start; }
+.partenaires .surtitre { color: var(--noir); }
+.partenaires h2 { color: var(--blanc); }
+.partenaires p:not(.surtitre) { max-width: 700px; font-size: 1.15rem; font-weight: 500; margin-bottom: 32px; }
+.partenaires .btn-plein { background: var(--noir); }
 
 /* Pied */
 .pied { background: var(--noir); color: var(--blanc); padding: 72px 0 80px; }
@@ -209,11 +213,14 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
   .cartes, .lettre-grille, .pied-grille, .tarifs { grid-template-columns: 1fr; }
   .frise { height: auto; display: grid; gap: 14px; }
   .frise-rail, .frise-mois { display: none; }
-  .frise-pause { position: static; width: auto !important; height: auto; background: none; padding-left: 16px; border-left: 3px solid var(--orange); }
+  .frise-pause, .frise-borne { position: static; width: auto !important; height: auto; background: none; padding-left: 16px; border-left: 3px solid var(--orange); }
   .frise-pause::before { display: none; }
+  .frise-borne { border-color: var(--noir); }
+  .est-fin { transform: none; }
+  .est-fin .frise-lbl { text-align: left; }
   .frise-lbl { position: static; }
   .est-passee { border-color: var(--gris); }
-  .grandir .conteneur { grid-template-columns: 1fr; grid-template-areas: "surtitre" "titre" "texte" "bouton" "logos"; }
+  .partenaires .conteneur { grid-template-columns: 1fr; grid-template-areas: "surtitre" "titre" "texte" "bouton" "logos"; }
   .logos { flex-direction: row; flex-wrap: wrap; justify-self: start; gap: 28px 40px; margin-top: 40px; }
   .logos img { height: 70px; }
   .lettre-grille { gap: 36px; }
@@ -221,7 +228,7 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
   .galerie-photos { grid-template-columns: repeat(2, 1fr); }
   .evenement { grid-template-columns: 1fr; gap: 20px; }
   .evenement .btn { justify-self: start; }
-  .bloc, .lettre, .grandir, .faq { padding: 72px 0; }
+  .bloc, .lettre, .partenaires, .faq { padding: 72px 0; }
   .candidature { padding: 32px 24px 28px; }
   .candidature h3 { font-size: 2rem; }
   .faq-liste { grid-template-columns: 1fr; gap: 28px; }
@@ -237,7 +244,7 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 /* Titres en minuscules (Oswald) : seuls le slogan, les jours, les prix et les dates restent en capitales Bebas */
-h2, h3, .accroche, .citation, .evenement h3, .vedette h2, .spectacle-texte h2, .grandir h2, .pied h3, .carte h3 { font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 500; text-transform: none; letter-spacing: -0.01em; line-height: 1.08; }
+h2, h3, .accroche, .citation, .evenement h3, .vedette h2, .spectacle-texte h2, .partenaires h2, .pied h3, .carte h3 { font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 500; text-transform: none; letter-spacing: -0.01em; line-height: 1.08; }
 h2 { font-size: clamp(2rem, 4.6vw, 3.6rem); }
 .accroche { font-size: clamp(1.6rem, 3.2vw, 2.6rem); }
 .citation { font-size: clamp(1.25rem, 2.2vw, 1.7rem); font-weight: 400; }
