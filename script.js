@@ -78,6 +78,21 @@
       }).join("")
     : `<p class="agenda-vide">Les prochaines dates seront annoncées sur <a href="${A.instagram}" target="_blank" rel="noopener">Instagram</a>.</p>`;
 
+  // --- Vacances (pas de cours ; les périodes passées disparaissent) ---
+  const num = (d) => (d.getDate() === 1 ? "1er" : d.getDate());
+  const periode = (v) => {
+    const d = jour(v.debut), f = jour(v.fin);
+    const debut = d.getMonth() === f.getMonth() ? num(d) : num(d) + " " + mois[d.getMonth()];
+    return "du " + debut + " au " + num(f) + " " + mois[f.getMonth()] + " " + f.getFullYear();
+  };
+  const pauses = A.vacances.filter((v) => jour(v.fin) >= aujourdhui).sort((a, b) => a.debut.localeCompare(b.debut));
+  $("vacances").innerHTML = pauses.length
+    ? `<p class="tarifs-titre">Vacances : pas de cours</p>
+       <table><thead><tr><th>Période</th><th>Dates</th></tr></thead>
+       <tbody>${pauses.map((v) => `<tr><td>${v.nom}</td><td>${periode(v)}</td></tr>`).join("")}</tbody></table>
+       <p class="tarifs-note">Mêmes dates que les vacances scolaires genevoises.</p>`
+    : "";
+
   // --- Candidature vidéo : petite fenêtre avec la trame, puis mail ---
   const boite = $("candidature");
   document.querySelectorAll("[data-candidature]").forEach((a) => {

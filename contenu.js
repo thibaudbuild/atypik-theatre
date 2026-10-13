@@ -45,6 +45,16 @@ window.ATYPIK = {
     { formule: "3 cours par semaine", prix: 350 },
   ],
 
+  // --- VACANCES (pas de cours) ---
+  // Mêmes dates que les vacances scolaires genevoises (calendrier officiel sur ge.ch).
+  // Une période disparaît toute seule du site une fois passée.
+  vacances: [
+    { nom: "Automne", debut: "2026-10-19", fin: "2026-10-23" },
+    { nom: "Noël et Nouvel An", debut: "2026-12-24", fin: "2027-01-08" },
+    { nom: "Février", debut: "2027-02-15", fin: "2027-02-19" },
+    { nom: "Pâques", debut: "2027-03-26", fin: "2027-04-09" },
+  ],
+
   // --- AGENDA ---
   // debut / fin au format AAAA-MM-JJ (fin = debut si un seul jour).
   // Un événement disparaît tout seul du site le lendemain de sa date de fin.
