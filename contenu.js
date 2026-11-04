@@ -91,8 +91,8 @@ window.ATYPIK = {
       placesLimitees: true,
     },
     {
-      debut: "2026-12-05",
-      fin: "2026-12-07",
+      debut: "2026-12-04",
+      fin: "2026-12-06",
       type: "Stage",
       titre: "Casting & caméra avec Mohamed Belhamar",
       sousTitre: "Directeur de casting",
