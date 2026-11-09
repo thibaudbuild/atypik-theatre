@@ -18,7 +18,7 @@ window.ATYPIK = {
       nom: "Technique",
       description:
         "Le corps, l'écoute, improvisation. Travail de scène.",
-      statut: "complet",
+      statut: "ouvert",
     },
     {
       jour: "Mardi",
@@ -26,7 +26,7 @@ window.ATYPIK = {
       description:
         "Apprivoiser la caméra : casting, self-tape, l'acteur à l'image, écriture.",
       statut: "ouvert",
-      note: "Ouverture le 3 novembre",
+      note: "Ouverture en janvier 2027",
       admission: "video",
     },
     {
@@ -34,7 +34,7 @@ window.ATYPIK = {
       nom: "Création",
       description:
         "Construction du personnage, travail du texte, écriture, création collective, carte blanche.",
-      statut: "complet",
+      statut: "ouvert",
     },
   ],
 
