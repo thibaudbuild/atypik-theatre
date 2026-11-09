@@ -13,6 +13,10 @@
     "Bonjour,\n\nJe souhaite m'inscrire : " + quoi +
     ".\n\nNom et prénom :\nTéléphone :\nMon parcours en quelques lignes :\n\nMerci !";
 
+  const corpsEssai = (quoi) =>
+    "Bonjour,\n\nJe souhaite faire un cours d'essai : " + quoi +
+    ".\n\nNom et prénom :\nTéléphone :\nMon parcours en quelques lignes :\n\nMerci !";
+
   const corpsCandidature = (quoi) =>
     "Bonjour,\n\nJe souhaite postuler : " + quoi +
     ".\n\nNom et prénom :\nTéléphone :\nLien vers ma vidéo de présentation (2 à 3 minutes, via SwissTransfer, WeTransfer ou un lien privé) :\n\nMerci !";
@@ -22,8 +26,8 @@
     const complet = c.statut === "complet";
     const video = !complet && c.admission === "video";
     const quoi = "cours du " + c.jour.toLowerCase() + " (" + c.nom + ")";
-    const objet = complet ? "Liste d'attente : " + quoi : video ? "Candidature : " + quoi : "Inscription : " + quoi;
-    const corps = video ? corpsCandidature(quoi) : corpsInscription(quoi);
+    const objet = complet ? "Liste d'attente : " + quoi : video ? "Candidature : " + quoi : "Cours d'essai : " + quoi;
+    const corps = video ? corpsCandidature(quoi) : corpsEssai(quoi);
     return `
       <article class="carte ${complet ? "est-complet" : "est-ouvert"}">
         <span class="etiquette">${complet ? "Complet" : c.note || "Inscriptions ouvertes"}</span>
@@ -32,7 +36,7 @@
         <p class="carte-texte">${c.description}</p>
         <a class="btn ${complet ? "btn-contour" : "btn-plein"}" ${video ? "data-candidature" : ""}
            href="${mailto(objet, corps)}">
-          ${complet ? "Rejoindre la liste d'attente" : video ? "Postuler" : "S'inscrire"}
+          ${complet ? "Rejoindre la liste d'attente" : video ? "Postuler" : "Essayer un cours"}
         </a>
       </article>`;
   }).join("");

@@ -19,6 +19,7 @@ window.ATYPIK = {
       description:
         "Le corps, l'écoute, improvisation. Travail de scène.",
       statut: "ouvert",
+      note: "Premier cours gratuit",
     },
     {
       jour: "Mardi",
@@ -35,6 +36,7 @@ window.ATYPIK = {
       description:
         "Construction du personnage, travail du texte, écriture, création collective, carte blanche.",
       statut: "ouvert",
+      note: "Premier cours gratuit",
     },
   ],
 
@@ -75,19 +77,6 @@ window.ATYPIK = {
       lieu: "TAMCO, Genève",
       horaire: "En soirée",
       prix: "Gratuit, sur inscription",
-      placesLimitees: true,
-    },
-    {
-      debut: "2026-11-13",
-      fin: "2026-11-15",
-      type: "Stage",
-      titre: "Casting & caméra avec Mohamed Belhamar",
-      sousTitre: "Directeur de casting",
-      description:
-        "Trois jours de travail face caméra : scènes de cinéma, mise en situation de casting et retours personnalisés.",
-      lieu: "Genève, secteur Plainpalais",
-      horaire: "10h à 17h",
-      prix: "300 CHF (250 CHF pour les élèves Atypik)",
       placesLimitees: true,
     },
     {

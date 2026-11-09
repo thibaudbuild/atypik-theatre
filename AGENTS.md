@@ -16,7 +16,7 @@ Site statique, sans étape de build ni dépendance. Ne pas en ajouter.
 
 - **Ajouter un stage ou une rencontre** : ajouter un bloc dans `agenda` de `contenu.js`, en copiant la forme d'un bloc existant. Dates au format `AAAA-MM-JJ`. Les événements passés disparaissent tout seuls du site, inutile de les supprimer.
 - **Mettre à jour la saison** : chaque été, changer la date de rentrée et de fin dans `saison` de `contenu.js` (mettre `finLibelle: ""` dès que la date de fin exacte est connue), puis remplacer les périodes du bloc `vacances` par celles du calendrier scolaire genevois (ge.ch). Les jours fériés isolés ne s'y mettent pas : il y a cours. Les périodes passées disparaissent toutes seules.
-- **Un cours est complet / rouvre** : changer `statut` en `"complet"` ou `"ouvert"` dans `cours`. Un cours avec `admission: "video"` affiche « Postuler » et demande une vidéo de présentation.
+- **Un cours est complet / rouvre** : changer `statut` en `"complet"` ou `"ouvert"` dans `cours`. Un cours avec `admission: "video"` affiche « Postuler » et demande une vidéo de présentation ; les autres cours ouverts affichent « Essayer un cours » (premier cours gratuit).
 - **Changer un tarif** : modifier `prix` dans `tarifs`.
 - **Changer une photo** : placer la nouvelle image dans `images/` (JPG, 1600 px de large maximum) et remplacer le nom du fichier dans `index.html`.
 
@@ -27,7 +27,7 @@ Site statique, sans étape de build ni dépendance. Ne pas en ajouter.
 - Ne jamais promettre d'images tournées ni de bande démo livrée dans la description des cours.
 - Prix en CHF.
 - Ne jamais publier le nombre exact de places par classe : écrire « places limitées ».
-- Ne jamais publier l'adresse exacte des cours : « secteur Plainpalais, adresse communiquée à l'inscription ».
+- Lieu des cours : « secteur Plainpalais » ; le lieu du moment (actuellement la Maison Internationale des Associations) peut être nommé.
 - Les inscriptions passent par e-mail (boutons `mailto`). Ne pas ajouter de formulaire ni de paiement en ligne sans demande explicite.
 - Ne publier une photo où des personnes sont reconnaissables que si Shawna confirme avoir leur accord (accord des parents pour les mineurs).
 - Garder la palette (orange `#e44607`, noir, crème) et les polices existantes (Bebas Neue pour le slogan, les jours et les chiffres ; Oswald pour les titres ; DM Sans pour le texte).
