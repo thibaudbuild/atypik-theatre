@@ -77,7 +77,9 @@
               <li>${e.prix}</li>
             </ul>
           </div>
-          <a class="btn btn-plein" href="${mailto("Inscription : " + e.titre, corpsInscription(e.titre + " (" + d.jours + " " + d.mois + ")"))}">S'inscrire</a>
+          ${e.lien
+            ? `<a class="btn btn-plein" href="${e.lien}" target="_blank" rel="noopener">${e.bouton || "Réserver"}</a>`
+            : `<a class="btn btn-plein" href="${mailto("Inscription : " + e.titre, corpsInscription(e.titre + " (" + d.jours + " " + d.mois + ")"))}">S'inscrire</a>`}
         </article>`;
       }).join("")
     : `<p class="agenda-vide">Les prochaines dates seront annoncées sur <a href="${A.instagram}" target="_blank" rel="noopener">Instagram</a>.</p>`;

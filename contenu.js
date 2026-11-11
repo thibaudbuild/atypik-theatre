@@ -65,6 +65,8 @@ window.ATYPIK = {
   // --- AGENDA ---
   // debut / fin au format AAAA-MM-JJ (fin = debut si un seul jour).
   // Un événement disparaît tout seul du site le lendemain de sa date de fin.
+  // lien + bouton (facultatifs) : si la réservation se fait sur un autre site,
+  // le bouton y renvoie au lieu d'ouvrir un e-mail d'inscription.
   agenda: [
     {
       debut: "2026-10-23",
@@ -91,6 +93,20 @@ window.ATYPIK = {
       horaire: "10h à 17h",
       prix: "300 CHF (250 CHF pour les élèves Atypik)",
       placesLimitees: true,
+    },
+    {
+      debut: "2026-12-21",
+      fin: "2026-12-22",
+      type: "Shooting photo",
+      titre: "Atypics! Shooting photo & direction d'acteur",
+      sousTitre: "Avec Yannick Colaizzi, photographe",
+      description:
+        "Une séance individuelle en studio pour réaliser ou enrichir votre book, accompagnée par le photographe et l'équipe d'Atypik Théâtre. Trois formules, de 20 à 45 minutes.",
+      lieu: "Studio HighKey, Plan-les-Ouates",
+      horaire: "Lundi 21 de 17h à 21h, mardi 22 de 9h à 17h",
+      prix: "De 129 à 199 CHF selon la formule",
+      lien: "https://ycp.ch/atypics/",
+      bouton: "Réserver un créneau",
     },
   ],
 };
