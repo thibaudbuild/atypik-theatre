@@ -99,7 +99,6 @@ window.ATYPIK = {
       fin: "2026-12-22",
       type: "Shooting photo",
       titre: "ATYPICS! Shooting photo & direction d'acteur",
-      sousTitre: "Avec Yannick Colaizzi, photographe",
       description:
         "Une séance individuelle en studio pour réaliser ou enrichir votre book, avec le photographe Yannick Colaizzi et l'équipe d'Atypik Théâtre.",
       lieu: "Studio HighKey, Plan-les-Ouates",
