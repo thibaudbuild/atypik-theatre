@@ -98,10 +98,10 @@ window.ATYPIK = {
       debut: "2026-12-21",
       fin: "2026-12-22",
       type: "Shooting photo",
-      titre: "Atypics! Shooting photo & direction d'acteur",
+      titre: "ATYPICS! Shooting photo & direction d'acteur",
       sousTitre: "Avec Yannick Colaizzi, photographe",
       description:
-        "Une séance individuelle en studio pour réaliser ou enrichir votre book, accompagnée par le photographe et l'équipe d'Atypik Théâtre. Trois formules, de 20 à 45 minutes.",
+        "Une séance individuelle en studio pour réaliser ou enrichir votre book. Yannick Colaizzi, photographe à Genève, réalise vos portraits ; l'équipe d'Atypik Théâtre assure la direction d'acteur. Trois formules, de 20 à 45 minutes.",
       lieu: "Studio HighKey, Plan-les-Ouates",
       horaire: "Lundi 21 de 17h à 21h, mardi 22 de 9h à 17h",
       prix: "Tarif élèves Atypik : de 129 à 199 CHF selon la formule",
