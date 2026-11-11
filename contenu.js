@@ -104,7 +104,7 @@ window.ATYPIK = {
         "Une séance individuelle en studio pour réaliser ou enrichir votre book, accompagnée par le photographe et l'équipe d'Atypik Théâtre. Trois formules, de 20 à 45 minutes.",
       lieu: "Studio HighKey, Plan-les-Ouates",
       horaire: "Lundi 21 de 17h à 21h, mardi 22 de 9h à 17h",
-      prix: "De 129 à 199 CHF selon la formule",
+      prix: "Tarif élèves Atypik : de 129 à 199 CHF selon la formule",
       lien: "https://ycp.ch/atypics/",
       bouton: "Réserver un créneau",
     },
