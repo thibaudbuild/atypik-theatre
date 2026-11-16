@@ -72,11 +72,11 @@
             <h3>${e.titre}</h3>
             ${e.sousTitre ? `<p class="evenement-sous">${e.sousTitre}</p>` : ""}
             <p>${e.description}</p>
-            <ul>
-              <li>${e.lieu}</li>
-              <li>${e.horaire}</li>
-              <li>${e.prix}</li>
-            </ul>
+            <dl>
+              <dt>Lieu</dt><dd>${e.lieu}</dd>
+              <dt>Horaires</dt><dd>${e.horaire}</dd>
+              <dt>Tarif</dt><dd>${e.prix}</dd>
+            </dl>
           </div>
           ${e.lien
             ? `<a class="btn btn-plein" href="${e.lien}" target="_blank" rel="noopener">${e.bouton || "Réserver"}</a>`

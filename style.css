@@ -48,8 +48,9 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .hero h1 { font-size: clamp(3.6rem, 12.5vw, 11rem); line-height: 0.86; margin-bottom: 28px; }
 .hero h1 em { color: var(--orange); }
 .hero-texte { max-width: 600px; font-size: 1.2rem; margin-bottom: 32px; }
-.actions { display: flex; flex-wrap: wrap; gap: 14px; }
-.hero .btn-contour:hover { background: var(--blanc); color: var(--noir); border-color: var(--blanc); }
+.hero-preuve { margin: 12px 0 26px; font-size: 0.95rem; }
+.hero-lien { font-weight: 700; font-size: 0.92rem; letter-spacing: 0.06em; text-transform: uppercase; text-underline-offset: 6px; }
+.hero-lien:hover { color: var(--orange); }
 
 /* Lettre de Shawna */
 .lettre { background: var(--orange); padding: 110px 0; }
@@ -147,7 +148,11 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .vedette h2 { margin-bottom: 8px; }
 .vedette .role { margin-bottom: 20px; }
 .vedette p:not(.role) { max-width: 560px; font-size: 1.08rem; margin-bottom: 14px; }
-.vedette em { font-style: italic; }
+.vedette p.films-titre { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); margin-bottom: 10px; }
+.films { list-style: none; margin-bottom: 20px; }
+.films li { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 14px; padding: 8px 0; border-top: 1px solid rgba(255,255,255,0.25); font-family: "Oswald", "Arial Narrow", sans-serif; font-weight: 500; font-size: clamp(1.5rem, 2.6vw, 2.1rem); line-height: 1.1; }
+.films li:last-child { border-bottom: 1px solid rgba(255,255,255,0.25); }
+.films span { font-family: var(--texte); font-weight: 400; font-size: 0.85rem; color: var(--gris); }
 
 /* Agenda */
 .evenement { display: grid; grid-template-columns: 220px 1fr auto; gap: 40px; align-items: center; padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.25); }
@@ -157,8 +162,8 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .evenement-type { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
 .evenement h3 { font-size: clamp(1.9rem, 3.4vw, 2.8rem); }
 .evenement-sous { font-weight: 700; margin: 4px 0 12px; }
-.evenement ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin-top: 16px; }
-.evenement li { padding: 5px 12px; border: 1px solid rgba(255,255,255,0.5); border-radius: 999px; font-size: 0.85rem; }
+.evenement dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 20px; margin-top: 18px; font-size: 0.95rem; }
+.evenement dt { padding-top: 4px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); }
 .agenda-vide { font-size: 1.2rem; }
 .agenda-vide a { color: var(--orange); }
 
