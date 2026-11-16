@@ -57,7 +57,8 @@
   const dates = (e) => {
     const d = jour(e.debut), f = jour(e.fin || e.debut);
     const jours = d.getTime() === f.getTime() ? String(d.getDate()) : d.getDate() + " – " + f.getDate();
-    return { jours, mois: mois[f.getMonth()] + " " + f.getFullYear() };
+    const debutMois = d.getMonth() === f.getMonth() ? "" : mois[d.getMonth()] + " – ";
+    return { jours, mois: debutMois + mois[f.getMonth()] + " " + f.getFullYear() };
   };
 
   $("agenda-liste").innerHTML = aVenir.length

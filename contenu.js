@@ -107,5 +107,17 @@ window.ATYPIK = {
       lien: "https://ycp.ch/atypics/",
       bouton: "Réserver un créneau",
     },
+    {
+      debut: "2027-01-29",
+      fin: "2027-02-01",
+      type: "Stage",
+      titre: "Atelier : de l'écriture au tournage",
+      description:
+        "Quatre jours pour passer de l'écriture au tournage. La présence est requise sur les quatre jours.",
+      lieu: "TAMCO, Genève, secteur Plainpalais",
+      horaire: "Vendredi et samedi de 10h à 18h ; dimanche et lundi, horaires selon le plan de tournage",
+      prix: "450 CHF (400 CHF pour les élèves Atypik)",
+      placesLimitees: true,
+    },
   ],
 };
