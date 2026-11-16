@@ -44,7 +44,7 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .hero { position: relative; min-height: min(100svh, 1000px); display: flex; align-items: flex-end; color: var(--blanc); overflow: hidden; }
 .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 40%; filter: grayscale(1) contrast(1.1); }
 .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,11,11,0.55) 0%, rgba(11,11,11,0.15) 35%, rgba(11,11,11,0.92) 100%); }
-.hero-contenu { position: relative; z-index: 1; width: min(1180px, 100% - 40px); margin-inline: auto; padding: 100px 0 clamp(32px, 7svh, 72px); }
+.hero-contenu { position: relative; z-index: 1; width: min(1180px, 100% - 40px); margin-inline: auto; padding: 100px 0 clamp(32px, 12svh, 130px); }
 .hero h1 { font-size: min(12.5vw, 10.2rem, 20svh); line-height: 0.86; margin-bottom: clamp(16px, 3svh, 28px); }
 .hero h1 em { color: var(--orange); }
 .hero-texte { max-width: 600px; font-size: 1.2rem; margin-bottom: clamp(20px, 3.5svh, 32px); }
@@ -154,6 +154,7 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
 .evenement:last-child { border-bottom: 1px solid rgba(255,255,255,0.25); }
 .evenement-date { font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.85rem; }
 .evenement-date span { display: block; font-family: var(--titre); font-size: 4.6rem; line-height: 0.9; letter-spacing: 0; color: var(--orange); white-space: nowrap; }
+.evenement-date-courte { display: none; font-family: var(--titre); font-size: 2.2rem; line-height: 1; color: var(--orange); text-transform: uppercase; }
 .evenement-type { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
 .evenement h3 { font-size: clamp(1.9rem, 3.4vw, 2.8rem); }
 .evenement-sous { font-weight: 700; margin: 4px 0 12px; }
@@ -233,7 +234,10 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
   .lettre-grille { gap: 36px; }
   .lettre-portrait img { aspect-ratio: 1 / 1; object-position: center 20%; }
   .galerie-photos { grid-template-columns: repeat(2, 1fr); }
-  .evenement { grid-template-columns: 1fr; gap: 20px; }
+  .evenement { grid-template-columns: 1fr; gap: 14px; padding: 32px 0; }
+  .evenement-date { display: none; }
+  .evenement-date-courte { display: block; }
+  .evenement dl { gap: 6px 12px; }
   .evenement .btn { justify-self: start; }
   .bloc, .lettre, .partenaires, .faq { padding: 72px 0; }
   .candidature { padding: 32px 24px 28px; }
@@ -249,6 +253,8 @@ h2 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); margin-bottom: 24px; }
   .hero-contenu { padding-top: 96px; padding-bottom: clamp(24px, 5svh, 48px); }
   .hero h1 { font-size: min(16.5vw, 9.5svh); }
   .hero-texte { font-size: clamp(1rem, 2.6svh, 1.2rem); line-height: 1.5; }
+  .hero-contenu::before { content: ""; position: absolute; z-index: -1; inset: 16px -20px 0; background: linear-gradient(180deg, rgba(11,11,11,0) 0, rgba(11,11,11,0.9) 110px, var(--noir) 220px); }
+  .nav-cta { padding: 7px 14px; font-size: 0.78rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 

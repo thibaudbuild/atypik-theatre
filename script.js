@@ -47,6 +47,7 @@
 
   // --- Agenda (les événements passés disparaissent) ---
   const mois = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
+  const moisCourts = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."];
   const jour = (iso) => new Date(iso + "T12:00:00");
   const aujourdhui = new Date(); aujourdhui.setHours(0, 0, 0, 0);
 
@@ -58,7 +59,11 @@
     const d = jour(e.debut), f = jour(e.fin || e.debut);
     const jours = d.getTime() === f.getTime() ? String(d.getDate()) : d.getDate() + " – " + f.getDate();
     const debutMois = d.getMonth() === f.getMonth() ? "" : mois[d.getMonth()] + " – ";
-    return { jours, mois: debutMois + mois[f.getMonth()] + " " + f.getFullYear() };
+    const m = (x) => moisCourts[x.getMonth()];
+    const courte = d.getTime() === f.getTime() ? d.getDate() + " " + m(d)
+      : d.getMonth() === f.getMonth() ? d.getDate() + " – " + f.getDate() + " " + m(f)
+      : d.getDate() + " " + m(d) + " – " + f.getDate() + " " + m(f);
+    return { jours, mois: debutMois + mois[f.getMonth()] + " " + f.getFullYear(), courte: courte + " " + f.getFullYear() };
   };
 
   $("agenda-liste").innerHTML = aVenir.length
@@ -67,6 +72,7 @@
         return `
         <article class="evenement">
           <div class="evenement-date"><span>${d.jours}</span>${d.mois}</div>
+          <p class="evenement-date-courte">${d.courte}</p>
           <div class="evenement-corps">
             <p class="evenement-type">${e.type}${e.placesLimitees ? " · Places limitées" : ""}</p>
             <h3>${e.titre}</h3>

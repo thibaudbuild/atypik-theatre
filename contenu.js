@@ -73,7 +73,6 @@ window.ATYPIK = {
       fin: "2026-10-23",
       type: "Rencontre",
       titre: "Soirée avec Mohamed Belhamar",
-      sousTitre: "Directeur de casting",
       description:
         "Une soirée de questions-réponses avec un directeur de casting : son métier, ce qu'il regarde, ce qu'il attend d'un comédien.",
       lieu: "TAMCO, Genève",
@@ -86,7 +85,6 @@ window.ATYPIK = {
       fin: "2026-12-06",
       type: "Stage",
       titre: "Casting & caméra avec Mohamed Belhamar",
-      sousTitre: "Directeur de casting",
       description:
         "Trois jours de travail face caméra : scènes de cinéma, mise en situation de casting et retours personnalisés.",
       lieu: "Genève, secteur Plainpalais",
@@ -112,7 +110,6 @@ window.ATYPIK = {
       fin: "2027-02-01",
       type: "Stage",
       titre: "Atelier : de l'écriture au tournage, avec Mohamed Belhamar",
-      sousTitre: "Directeur de casting",
       description:
         "Quatre jours pour passer de l'écriture au tournage. La présence est requise sur les quatre jours.",
       lieu: "TAMCO, Genève, secteur Plainpalais",
