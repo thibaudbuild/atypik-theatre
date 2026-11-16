@@ -103,7 +103,7 @@ window.ATYPIK = {
         "Une séance individuelle en studio pour réaliser ou enrichir votre book, avec le photographe Yannick Colaizzi et l'équipe d'Atypik Théâtre.",
       lieu: "Studio HighKey, Plan-les-Ouates",
       horaire: "Lundi 21 de 17h à 21h, mardi 22 de 9h à 17h",
-      prix: "Tarif élèves Atypik : de 129 à 199 CHF selon la formule",
+      prix: "De 129 à 199 CHF selon la formule (tarif élèves Atypik)",
       lien: "https://ycp.ch/atypics/",
       bouton: "Réserver un créneau",
     },
