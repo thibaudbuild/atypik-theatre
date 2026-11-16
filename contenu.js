@@ -111,7 +111,8 @@ window.ATYPIK = {
       debut: "2027-01-29",
       fin: "2027-02-01",
       type: "Stage",
-      titre: "Atelier : de l'écriture au tournage",
+      titre: "Atelier : de l'écriture au tournage, avec Mohamed Belhamar",
+      sousTitre: "Directeur de casting",
       description:
         "Quatre jours pour passer de l'écriture au tournage. La présence est requise sur les quatre jours.",
       lieu: "TAMCO, Genève, secteur Plainpalais",
